@@ -1,0 +1,15 @@
+.item {
+    color: red;
+    border: 1px solid blueviolet;
+    width: 210px;
+    min-height: 50px;
+}
+
+.btns {
+    display: flex;
+    gap: 10px;
+}
+
+.like {
+    width: 100px;
+}
