@@ -3,17 +3,6 @@ import style from "./navbar.module.css";
 import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
-    const link = document.querySelectorAll("a");
-
-    link.forEach((item) => {
-        item.addEventListener("click", (e) => {
-            if (e.target === item) {
-                link.forEach((item) => item.classList.remove("active"));
-                item.classList.add("active");
-            }
-        });
-    });
-
     return (
         <aside className={style.navMenu}>
             <ul className={style.list}>

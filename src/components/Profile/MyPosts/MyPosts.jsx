@@ -1,12 +1,10 @@
 import style from "./myPosts.module.css";
 import { Post } from "./Post/Post";
 
-export const MyPosts = () => {
-    return (
-        <div className={style.list}>
-            <Post message="Hello, guys" />
-            <Post message='It"s my first post' />
-            <Post message="WOW!!!" />
-        </div>
-    );
+export const MyPosts = ({ postsData }) => {
+    const postsElements = postsData.map((post, id) => (
+        <Post message={post.message} key={id} />
+    ));
+
+    return <div className={style.list}>{postsElements}</div>;
 };
